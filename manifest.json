@@ -1,0 +1,40 @@
+{
+  "name": "Vanadis",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "大劍無鋒，重巧不工",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "logo.png",
+      "38": "logo.png"
+    },
+    "default_title": "Vanadis",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "http://www.csdn.net/*"
+      ],
+      "js": [
+        "/js/background.js"
+      ]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "/js/background.js"
+    ]
+  },
+  "offline_enabled": true
+}
