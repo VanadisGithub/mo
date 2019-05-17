@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>默</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="/js/newtab/flipclock.css">
+    <link rel="stylesheet" href="/js/newtab/carousel.css.css">
+</head>
+
+<style>
+
+    html, body {
+        /*width:100%;*/
+        /*height:100%*/
+    }
+
+    .body {
+        background: #000000;
+        /*background-size: 100%;*/
+        /*background-image: url(img/20140912095609461.jpg);*/
+        /*background-repeat: no-repeat;*/
+    }
+
+    .box {
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: box-turn 20s infinite linear;
+    }
+
+    .box > div {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        border-radius: 1px;
+        border:5px solid rgba(0, 0, 0, .1);
+        text-align: center;
+        line-height: 300px;
+        color: #cccccc;
+        font-size: 100px;
+        transition: all 1s linear;
+        background: rgba(255, 255, 255, .0618);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(150px);
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(150px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(150px);
+    }
+
+    .before {
+        transform: translateZ(150px);
+    }
+
+    .after {
+        transform: translateZ(-150px);
+    }
+
+    @keyframes box-turn {
+        from {
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+        to {
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }
+
+    .word {
+        font-size: 30px;
+        color: #cccccc50;
+        margin: 20px;
+    }
+
+    #hours {
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 15%;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+</style>
+
+<body class="body">
+
+<div class="clock"></div>
+
+<!--<div class="poster-main">-->
+<!--<ul class="poster-list">-->
+<!--<li class="poster-item"><a href=""><img src="img/1.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/2.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/3.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/4.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/1.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/5.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/6.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/7.jpg" width="100%" height="100%"></a></li>-->
+<!--<li class="poster-item"><a href=""><img src="img/8.jpg" width="100%" height="100%"></a></li>-->
+<!--</ul>-->
+<!--<div class="poster-prev btn"></div>-->
+<!--<div class="poster-next btn"></div>-->
+<!--</div>-->
+
+<div class="word">
+
+    <div>外网：<span id="ip1">---.---.---.---</span></div>
+    <div>内网：<span id="ip2"></span></div>
+
+    <div style="position:absolute;left:20px;bottom:20px;">
+        <div><span id="weather"></span></div>
+        <table id="hours">
+        </table>
+    </div>
+
+    <img class="logo" src="/img/默.PNG">
+    <div class="box">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="before">默</div>
+        <div class="after"></div>
+        <!--<div class="top">简</div>-->
+        <!--<div class="bottom">V</div>-->
+        <!--<div class="left">默</div>-->
+        <!--<div class="right">A</div>-->
+        <!--<div class="before">藏</div>-->
+        <!--<div class="after">P</div>-->
+    </div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/newtab/flipclock.js"></script>
+<script src="/js/newtab/carousel.js"></script>
+<script src='/js/newtab/newtab.js'></script>
+
+</body>
+</html>
